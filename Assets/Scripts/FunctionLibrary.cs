@@ -4,9 +4,13 @@ using static UnityEngine.Mathf;
 
 public static class FunctionLibrary
 {
-    
+    public enum TransitionMode
+    {
+        Cycle,
+        Random
+    };
     public delegate Vector3 Function(float u, float v, float t);
-
+    
     public enum FunctionName
     {
         Wave,
@@ -86,7 +90,13 @@ public static class FunctionLibrary
 
     public static FunctionName GetRandomFunctionName(FunctionName name)
     {
-        
+        var choice = (FunctionName)Random.Range(1, _functions.Length);
+        return choice == name ? 0 : choice;
     }
     
+    public static Vector3 Morph(float u, float v, float t, Function from, Function to, float progress)
+    {
+        return Vector3.Lerp(from(u, v, t), to(u, v, t), progress);
+    }
+
 }
