@@ -1,4 +1,4 @@
-Shader "Graph/Point Surface GPU"
+Shader "Graph/PointSurfaceGPU"
 {
     Properties
     {
@@ -13,14 +13,11 @@ Shader "Graph/Point Surface GPU"
         #pragma editor_sync_compilation
         #pragma target 4.5
         #include "Point-GPU-URP.hlsl"
-        
         struct Input
         {
             float3 worldPos;    
         };
         float _Smoothness;
-
-
 
         
         void ConfigureSurface (Input input, inout SurfaceOutputStandard surface)
