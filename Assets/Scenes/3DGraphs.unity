@@ -185,11 +185,11 @@ MonoBehaviour:
   computeShader: {fileID: 7200000, guid: a2b3fce693e21ef4bbbffac5aa9f6c03, type: 3}
   mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
   material: {fileID: 2100000, guid: ea62a951493b5de489e4ec4a6e4817c9, type: 2}
-  resolution: 500
+  resolution: 1000
   function: 0
-  transitionMode: 0
-  functionDuration: 1
-  transitionDuration: 1
+  transitionMode: 1
+  functionDuration: 2
+  transitionDuration: 2
 --- !u!1 &194827336
 GameObject:
   m_ObjectHideFlags: 0
